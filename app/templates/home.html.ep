@@ -1,0 +1,273 @@
+% use Mojo::JSON qw/ to_json /;
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Torrelodones se mueve</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/static/css/main.css?v2">
+    <link rel="stylesheet" href="/static/custom.css">
+    <noscript><link rel="stylesheet" href="/static/css/noscript.css" /></noscript>
+    <link rel="shortcut icon" type="image/png" href="/static/img/icon-red.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="og:site_name" content="Torrelodones se mueve"/>
+    <meta property="og:title" content="Torrelodones se mueve: festival de movilidad"/>
+    <meta property="og:url" content="https://torrelodones.semueve.org"/>
+    <meta property="og:description" content="Microfestival online por la semana de la movilidad 2020"/>
+    <meta property="og:image" content="https://torrelodones.semueve.org/static/img/share.jpg"/>
+    <meta property="og:locale" content="es_ES"/>
+    <meta property="fb:app_id" content="3255657914464482"/>
+  </head>
+  <body class="landing is-preload">
+    <div id="page-wrapper">
+
+      <header id="header" class="alt">
+        <h1><a href="/">Torrelodones<span style="color:red;">SEMueve</span></a></h1>
+        <nav id="nav">
+          <ul>
+            <li class="special">
+              <a href="#menu" class="menuToggle"><span>Menu</span></a>
+              <div id="menu">
+                <ul>
+                  <li><a href="/">Portada</a></li>
+                  <li><a href="/#/schedule">Programa</a></li>
+                  <li>
+                    <a href="/#/sponsors">Colaboradores</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="banner">
+        <div class="inner">
+          <h2>Torrelodones<span style="color:red;">SEMueve</span></h2>
+          <p>Festival online por la semana de la movilidad sostenible</p>
+          <ul class="actions special upcoming" style="display:none;">
+            <li><a href="/" class="button primary"><span>En vivo</span> <i class="fas fa-play"></i></a></li>
+          </ul>
+          <h3>16-22 Septiembre de 2020</h3>
+        </div>
+      </section>
+
+      <section id="/presentation" class="wrapper style1 special">
+        <div class="inner">
+          <header class="major">
+            <h2>Una semana para celebrar la movilidad</h2>
+            <p>
+              <b class="block">
+              Se Mueve Torrelodones es un festival online de movilidad urbana. Una cita en la que daremos voz a los principales actores de la ciudad en la materia: los mejores y más reputados expertos, pero también los auténticos protagonistas: los ciudadanos. Una semana de charlas, debates y entrevistas en la que aprender juntos. Todo, con un objetivo: convertir Torrelodones en una ciudad más amable.
+             Es un festival online. Todo permance, nada desaparece. Esto te permitirá volver a visualizar los contenidos todas las veces que quieras para siempre.
+             </b>
+              </b>
+            </p>
+            <p>
+              <b class="block">
+              </b>
+            </p>
+          </header>
+        </div>
+      </section>
+
+      <section id="/venue" class="wrapper style2 special">
+        <div class="inner">
+          <header class="major">
+            <h2>Dónde</h2>
+            <p>
+Se Mueve Torrelodones se celebra en Internet. Nos parece la manera más segura de hacerlo, pero también la más accesible. ¿El objetivo? Que no pierdas detalle de todo lo que hemos preparado para ti. Hay mucho que contar, aprender y compartir. Y todo, a un clic.            </p>
+          </header>
+        </div>
+      </section>
+
+      <section id="/schedule" class="wrapper style3 special">
+        <div class="inner">
+          <header class="major">
+            <h2>Programa</h2>
+            <p>
+Historias, debates, propuestas... El programa de Se Mueve Torrelodones contará con infinidad de ideas. Porque Torrelodones está en constante movimiento. ¡Muévete con nosotros!            </p>
+          </header>
+           <h2>Apúntate</h2>
+            <p>
+Podrás seguir los eventos en directo en esta web y, si quieres participar de forma activa a través del chat, existen unas plazas limitadas para que puedas acceder de manera gratuita a la plataforma que hemos preparado. Entra en los eventos que te interesen y haz click en el botón ¡Me apunto!</header>
+
+        % for my $day ( $days->@* ) {
+          <table id="schedule">
+            <thead>
+              <tr class="header">
+                <th></th>
+                <th>
+                  <%= ucfirst $day->{date}->day_name %> <%= $day->{date}->day %> de <%= $day->{date}->month_name %>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            % my $count = 0;
+            % for my $event ( $day->{events}->@* ) {
+              <tr>
+                  <td class="time" data-start="<%= $event->{meta}{start_at}->clone->set_time_zone('UTC')->epoch %>" data-end="<%= $event->{meta}{end_at} && $event->{meta}{end_at}->clone->set_time_zone('UTC')->epoch %>" >
+                % my $time = $event->{meta}{start_at}->hms;
+                % $time =~ s/:00$//;
+                  <%= $time %>
+                % if ( my $end = $event->{meta}{end_at} ) {
+                % $time = $end->hms;
+                % $time =~ s/:00$//;
+                  <br/><%= $time %>
+                % }
+                </td>
+              % if ( $event->{meta}{featured} ) {
+                <td class="room room-venue time-<%= $event->{meta}{duration} || 60 %>">
+              % } else {
+                <td class="room room-<%= $count++ % 2 %> time-<%= $event->{meta}{duration} || 60 %>">
+              % }
+                  <div class="title">
+                    <a href="/event/<%= $event->{slug} %>/"><%= $event->{meta}{title} %></a>
+                  </div>
+                  <div class="author"><%= $event->{meta}{peers} || '' %></div>
+                </td>
+              </tr>
+          % }
+            </tbody>
+          </table>
+        % }
+        </div>
+      </section>
+
+      <section id="/sponsors" class="sponsors style4">
+          <ul>
+          % for my $e ( sort { ($a->{meta}{order}||100) <=> ($b->{meta}{order}||100) } $expositors->@* ) {
+          <li><a href="<%= $e->{meta}{url} %>"><img loading="lazy" alt="<%= $e->{meta}{name} %>" src="/static/img/<%= $e->{slug} %>.png"></a></li>
+          % }
+          </ul>
+      </section>
+
+      <footer id="footer">
+        <ul class="icons">
+          <li><a href="https://www.facebook.com/ciclosfera/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="https://www.instagram.com/ciclosfera/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="https://www.youtube.com/channel/UCcgrRFCcdkMqJ8zLSLfGX1Q" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+          <li><a href="https://twitter.com/ciclosfera" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="mailto:contacto@ciclosfera.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>Organizan <a href="https://ciclosfera.com">Ciclosfera</a> y <a href="https://www.torrelodones.es">Ayuntamiento de Torrelodones</a></li>
+        </ul>
+      </footer>
+
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery.scrollex.min.js"></script>
+    <script src="/static/js/jquery.scrolly.min.js"></script>
+    <script src="/static/js/browser.min.js"></script>
+    <script src="/static/js/breakpoints.min.js"></script>
+    <script src="/static/js/util.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165537393-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-165537393-2');
+    </script>
+    <script type="application/ld+json">
+      <%= to_json({
+        '@context'    => "http://schema.org",
+        '@type'       => "Event",
+        name          => 'Torrelodones se mueve - Microfestival online por la semana de la movilidad 2020',
+        url           => "https://torrelodones.semueve.org/",
+        location => {
+            type => "VirtualLocation",
+            url  => "https://torrelodones.semueve.org/",
+        },
+        startDate     => '2020-09-16',
+        endDate       => '2020-09-22',
+        subEvent => $events->map(sub{{
+          '@type'   => "Event",
+          name      => $_->{meta}{title},
+          url       => "https://torrelodones.semueve.org/event/$_->{slug}/",
+          location  => {
+              type => "VirtualLocation",
+              url  => "https://torrelodones.semueve.org/event/$_->{slug}/",
+          },
+          startDate => $_->{meta}{start_at} && $_->{meta}{start_at}->clone->set_time_zone('UTC')->stringify .'Z',
+          endDate   => $_->{meta}{end_at} && $_->{meta}{end_at}->clone->set_time_zone('UTC')->stringify .'Z',
+        }})->to_array
+      }) %>
+    </script>
+    <script>
+        function formatTime(date) {
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          hours   = hours < 10 ? '0'+hours : hours;
+          minutes = minutes < 10 ? '0'+minutes : minutes;
+          return hours + ':' + minutes;
+        }
+        function inSeconds(date) { return parseInt( ( date.getTime() - (new Date()).getTime() ) / 1000 ) }
+        function upcomingEvent() {
+            var ev = {};
+            var now = new Date();
+            $('#schedule tr').each(function(i,e){
+                var tr = $(e);
+                var start = tr.find('td.time').first().data('startDate');
+                var end   = tr.find('td.time').first().data('endDate');
+                if ( now >= start && now <= end ) {
+                    var link = tr.find('.title > a')
+                    ev.current = {
+                        url: link.attr('href'),
+                        name: link.text()
+                    };
+                }
+                else if ( now < start && parseInt((start - now) / 1000) < 3600 ) {
+                    var link = tr.find('.title > a')
+                    ev.next = {
+                        url: link.attr('href'),
+                        name: link.text()
+                    };
+                }
+                else if ( now < start ) {
+                    ev.keep = true;
+                }
+            });
+
+            var upcoming = $('ul.upcoming')
+            if ( ev.current ) {
+                upcoming.find('a').attr('href', ev.current.url);
+                upcoming.find('a').attr('title', ev.current.name);
+                upcoming.find('a > span').html('Ver ahora');
+                upcoming.show();
+            }
+            else if ( ev.next ) {
+                upcoming.find('a').attr('href', ev.next.url);
+                upcoming.find('a').attr('title', ev.next.name);
+                upcoming.find('a > span').html('Está por comenzar');
+                upcoming.show();
+            }
+            else {
+                upcoming.hide();
+            }
+
+            if ( ev.keep ) {
+                setTimeout(function(){ upcomingEvent() }, 12000 )
+            }
+        }
+        $(function(){
+            $("td.time").each(function(i,v){
+                var td = $(v);
+                var startDate = new Date( td.data('start') * 1000 );
+                td.data( 'startDate', startDate )
+                var out = formatTime(startDate);
+                if (td.data('end')) {
+                    var endDate = new Date( td.data('end') * 1000 );
+                    out = out + '<br/>' + formatTime(endDate);
+                    td.data( 'endDate', endDate )
+                }
+                td.html(out);
+            });
+
+            // Keep checking to show upcoming/running event/streaming
+            upcomingEvent();
+        });
+    </script>
+  </body>
+</html>
