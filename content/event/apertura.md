@@ -1,16 +1,14 @@
-title: Apertura de la Semana de Movilidad
-description: Esto está a punto de empezar...
-at: 16/09/2020 09:00
-duration: 30
+title: Los vecinos de Torrelodones hablan sobre movilidad
+description: ¿Cómo nos movemos?
+at: 18/09/2020 19:00
+duration: 60
 peers: 
-join_url:
+join_url:https://my.demio.com/ref/wrOjGzSvlAs8Y41e
 youtube:
 share_img:/static/share/mas-gente-bicicleta.jpg
 ----
 ### Sobre qué hablaremos en este evento
 
-¿Es posible que las personas mayores monten en bicicleta? Con Yayacleta sí. Es una bici especial, más grande, para más personas y conducida por voluntarios. Durante la semana de la movilidad Logroño va a contar con una de ellas para que los más mayores puedan sentir la libertad que te ofrece este medio de transporte.
+¿Cómo es la movilidad en Torrelodones? ¿Qué facilidades encuentran los ciudadanos? ¿Cuáles son las dificultades? En este debate contaremos con diferentes representantes de asociaciones y ciudadanos, aquellas personas que recorren las calles de la ciudad diariamente para que nos cuenten de primera mano cómo es moverse en Torrelodones.
 
-¿Has probado alguna vez una bicicleta de carga? Son más grandes, especiales podrñiamos decir y parecen difíciles de manejar, pero... ¿es realmente así? Pruébalo tú mismo.
-
-Una vez que la pruebes serás capaz de entender y ponerte en la piel de los ciclomensajeros que recorren las ciudades con mercancías para llevarlos a la puerta de casa.
+Te invitamos a seguir en directo este evento online.
