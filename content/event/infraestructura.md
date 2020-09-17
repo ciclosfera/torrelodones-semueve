@@ -1,6 +1,6 @@
 title: Infraestructura: situación actual y futura en Torrelodones
 description: ¿Cuenta la ciudad con infraestructuras amigables para los ciudadanos?
-at: 22/09/2020 20:00
+at: 21/09/2020 20:00
 duration: 60
 peers: 
 join_url:https://my.demio.com/ref/BAB9Dyvj3HXVLKRl
