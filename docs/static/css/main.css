@@ -87,7 +87,7 @@ html {
 }
 
 body {
-    background: #415253;
+    background: #bda23a;
 }
 
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1859,7 +1859,7 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-    box-shadow: 0 0 0 2px #B00B21;
+    box-shadow: 0 0 0 2px #000000;
 }
 
 select {
@@ -1949,14 +1949,14 @@ input[type="radio"] + label:before {
 
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
-    background: #415253;
+    background: #bda23a;
     color: #fff;
     content: '\f00c';
 }
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-    box-shadow: 0 0 0 2px #B00B21;
+    box-shadow: 0 0 0 2px #000000;
 }
 
 input[type="checkbox"] + label:before {
@@ -2817,7 +2817,7 @@ button:disabled,
 }
 
 .wrapper.style1 {
-    background-color: #B00B21;
+    background-color: #000000;
     color: #c8ece9;
 }
 
@@ -2871,7 +2871,7 @@ button:disabled,
 
 .wrapper.style1 select option {
     color: #ffffff;
-    background: #B00B21;
+    background: #000000;
 }
 
 .wrapper.style1 input[type="checkbox"] + label,
@@ -2887,7 +2887,7 @@ button:disabled,
 .wrapper.style1 input[type="checkbox"]:checked + label:before,
 .wrapper.style1 input[type="radio"]:checked + label:before {
     background: #ffffff;
-    color: #B00B21;
+    color: #000000;
 }
 
 .wrapper.style1 ::-webkit-input-placeholder {
@@ -2976,11 +2976,11 @@ button:disabled,
 }
 
 .wrapper.style2 {
-    background-color: #415253;
+    background-color: #bda23a;
 }
 
 .wrapper.style3 {
-    background-color: #476CA6;
+    background-color: #351842;
     color: #d3d4e4;
 }
 
@@ -3034,7 +3034,7 @@ button:disabled,
 
 .wrapper.style3 select option {
     color: #ffffff;
-    background: #476CA6;
+    background: #351842;
 }
 
 .wrapper.style3 input[type="checkbox"] + label,
@@ -3050,7 +3050,7 @@ button:disabled,
 .wrapper.style3 input[type="checkbox"]:checked + label:before,
 .wrapper.style3 input[type="radio"]:checked + label:before {
     background: #ffffff;
-    color: #476CA6;
+    color: #351842;
 }
 
 .wrapper.style3 ::-webkit-input-placeholder {
@@ -3148,11 +3148,11 @@ button:disabled,
 }
 
 .wrapper.style5 strong, .wrapper.style5 b {
-    color: #415253;
+    color: #bda23a;
 }
 
 .wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
-    color: #415253;
+    color: #bda23a;
 }
 
 .wrapper.style5 hr {
@@ -3180,7 +3180,7 @@ button:disabled,
 }
 
 .wrapper.style5 label {
-    color: #415253;
+    color: #bda23a;
 }
 
 .wrapper.style5 input[type="text"],
@@ -3196,7 +3196,7 @@ button:disabled,
 }
 
 .wrapper.style5 select option {
-    color: #415253;
+    color: #bda23a;
     background: #ffffff;
 }
 
@@ -3212,7 +3212,7 @@ button:disabled,
 
 .wrapper.style5 input[type="checkbox"]:checked + label:before,
 .wrapper.style5 input[type="radio"]:checked + label:before {
-    background: #415253;
+    background: #bda23a;
     color: #ffffff;
 }
 
@@ -3253,7 +3253,7 @@ button:disabled,
 }
 
 .wrapper.style5 table th {
-    color: #415253;
+    color: #bda23a;
 }
 
 .wrapper.style5 table thead {
@@ -3274,7 +3274,7 @@ button:disabled,
 .wrapper.style5 button,
 .wrapper.style5 .button {
     box-shadow: inset 0 0 0 2px #dfdfdf;
-    color: #415253;
+    color: #bda23a;
 }
 
 .wrapper.style5 input[type="submit"]:hover,
@@ -3351,7 +3351,7 @@ button:disabled,
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
     -webkit-overflow-scrolling: touch;
-    background: #B00B21;
+    background: #000000;
     color: #ffffff;
     height: 100%;
     max-width: 80%;
@@ -3445,7 +3445,7 @@ body.is-menu-visible #menu {
     -webkit-transition: background-color 0.2s ease;
     -ms-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
-    background: #415253;
+    background: #000000;
     height: 3em;
     left: 0;
     line-height: 3em;
@@ -3694,7 +3694,7 @@ body.is-menu-visible #menu {
     -ms-transition-delay: 1.25s;
     transition-delay: 1.25s;
     content: '';
-    background: #415253;
+    background: #bda23a;
     display: block;
     width: 100%;
     height: 100%;
@@ -4009,10 +4009,10 @@ body.is-mobile.landing #footer {
     box-sizing: border-box;
     align-items: stretch;
     background-color: #eee;
-    color: #415253;
+    color: #bda23a;
 }
 #main > div.event-head h2 {
-    color: #415253;
+    color: #bda23a;
 }
 
 #main > div.event-head > * {
