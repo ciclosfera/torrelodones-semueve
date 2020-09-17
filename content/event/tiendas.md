@@ -1,7 +1,7 @@
 title: Debate: Tiendas y mecánica
 description: Con las manos en la grasa
 at: 19/09/2020 16:00
-duration: 60
+duration: 75
 peers: 
 join_url:https://my.demio.com/ref/9LRovgayrXXO7tEz
 youtube:
