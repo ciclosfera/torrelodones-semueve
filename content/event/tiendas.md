@@ -4,7 +4,7 @@ at: 19/09/2020 16:00
 duration: 75
 peers: 
 join_url:https://my.demio.com/ref/9LRovgayrXXO7tEz
-youtube:
+youtube:pUbLgEU_bcw
 share_img:/static/share/mas-gente-bicicleta.jpg
 ----
 ### Sobre qué hablaremos en este evento
