@@ -1,7 +1,7 @@
 title: En bici con niños
 description: Los ciclistas del futuro
 at: 21/09/2020 18:00
-duration: 60
+duration: 75
 peers: 
 join_url:https://my.demio.com/ref/oFrQxmcJ5lmjjuGq
 youtube:
