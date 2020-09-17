@@ -4,7 +4,7 @@ at: 19/09/2020 18:00
 duration: 75
 peers: Héctor Muñoz (Manual Art Work)
 join_url:https://my.demio.com/ref/pkmbvs2QhvXp7vxx
-youtube:
+youtube: Fcm1UVbGeNE
 share_img:/static/share/mas-gente-bicicleta.jpg
 ----
 ### Sobre qué hablaremos en este evento
