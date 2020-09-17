@@ -1,7 +1,7 @@
 title: Debate: Consejos básicos de ciclismo urbano
 description: Todo lo que deberías saber para iniciarte en el ciclismo urbano
 at: 19/09/2020 18:00
-duration: 60
+duration: 75
 peers: Héctor Muñoz (Manual Art Work)
 join_url:https://my.demio.com/ref/pkmbvs2QhvXp7vxx
 youtube:
