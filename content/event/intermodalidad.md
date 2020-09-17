@@ -1,6 +1,6 @@
-title: Debate: Debate: Intermodalidad
+title: Debate: Intermodalidad
 description: ¿Complementas más de un medio de transporte para moverte por la ciudad?
-at: 21/09/2020 20:00
+at: 22/09/2020 20:00
 duration: 60
 peers: 
 join_url:https://my.demio.com/ref/Hy3yKqm8MqIyMf9g
