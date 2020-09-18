@@ -2,7 +2,7 @@ title: Los vecinos de Torrelodones hablan sobre movilidad
 description: ¿Cómo nos movemos?
 at: 18/09/2020 19:00
 duration: 75
-peers: Juan de la Torre y Cibrán Isasi.
+peers: Juan de la Torre, Raúl Rodera y Cibrán Isasi.
 join_url:https://my.demio.com/ref/wrOjGzSvlAs8Y41e
 youtube:Ak1wl4wRtbs
 share_img:/static/share/mas-gente-bicicleta.jpg
