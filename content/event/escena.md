@@ -2,7 +2,7 @@ title: En marcha: escena ciclista y deportiva local
 description: Todo lo que deberías saber para iniciarte en el ciclismo urbano
 at: 19/09/2020 16:45
 duration: 45
-peers: Paula Irala (club Triatlón Ohana de Torrelodones) y José Pascua Barroso (Porto Bikes)
+peers: Paula Irala (Club Triatlón Ohana de Torrelodones) y José Pascua Barroso (Porto Bikes)
 join_url: https://my.demio.com/ref/Fb4ur5aO0CeDKHhQ
 youtube: SnBc-6_HslE
 share_img:/static/share/mas-gente-bicicleta.jpg
