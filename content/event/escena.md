@@ -1,4 +1,4 @@
-title: En marcha: escena cilista y deportiva local 
+title: En marcha: escena ciclista y deportiva local 
 description: Todo lo que deberías saber para iniciarte en el ciclismo urbano
 at: 19/09/2020 16:45
 duration: 45
