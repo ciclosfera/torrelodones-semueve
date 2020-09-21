@@ -2,7 +2,7 @@ title: En bici con niños
 description: Los ciclistas del futuro
 at: 21/09/2020 18:00
 duration: 75
-peers: 
+peers: Jon Horan
 join_url:https://my.demio.com/ref/oFrQxmcJ5lmjjuGq
 youtube:rBtqgU9Y59M
 share_img:/static/share/mas-gente-bicicleta.jpg
