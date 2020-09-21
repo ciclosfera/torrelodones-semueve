@@ -1,8 +1,8 @@
-title: Infraestructura: situación actual y futura en Torrelodones
+title: Infraestructuras: situación actual y futura en Torrelodones
 description: ¿Cuenta la ciudad con infraestructuras amigables para los ciudadanos?
 at: 21/09/2020 20:00
 duration: 75
-peers: 
+peers: David Moreno (Concejal de Urbanismo, Movilidad e Infraestructuras, Vivienda y Deportes) y Francisco López (Técnico de Movilidad del ayuntamiento de Torrelodones).
 join_url:https://my.demio.com/ref/BAB9Dyvj3HXVLKRl
 youtube:D6MF7Qg1s2Y
 share_img:/static/share/mas-gente-bicicleta.jpg
